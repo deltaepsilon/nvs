@@ -97,7 +97,7 @@ nvs() {
 		"cd")
 			# Find the nearest .node-version file in current or parent directories
 			local DIR=$PWD
-			while [ "$DIR" != "" -a ! -e "$DIR/.nvmrc" ]; do
+			while [ "$DIR" != "" -a ! -e "$DIR/.node-version" ] && [ "$DIR" != "" -a ! -e "$DIR/.nvmrc" ]; do
 				if [ "$DIR" = "/" ]; then
 					DIR=
 				else
